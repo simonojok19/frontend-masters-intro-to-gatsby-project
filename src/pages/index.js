@@ -11,10 +11,16 @@ export default function IndexPage() {
       }
     }
   `)
+
+  const meta = data?.site?.siteMetadata ?? {}
   return (
-    <main>
-      <h1>Hello Frontend Masters</h1>
-      <Link to="/about">About</Link>
-    </main>
+    <>
+      <header>
+        <Link to="/">{meta.title}</Link>
+      </header>
+      <main>
+        <h1>Hello Frontend Masters</h1>
+        <Link to="/about">About</Link>
+      </main></>
   )
 }
